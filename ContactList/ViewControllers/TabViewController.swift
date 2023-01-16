@@ -14,15 +14,17 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configTableViews()
+    }
+    
+    private func configTableViews() {
         guard let tabrootvcs = viewControllers else { return }
         for vc in tabrootvcs {
             guard let navi = vc as? UINavigationController else { continue }
-            for naviVC in navi.viewControllers {
-                if let personVC = naviVC as? PersonsTableViewController {
-                    personVC.contacts = contacts
-                } else if let personExtVC = naviVC as? PersonsExtTableViewController {
-                    personExtVC.contacts = contacts
-                }
+            if let personVC = navi.topViewController as? PersonsTableViewController {
+                personVC.contacts = contacts
+            } else if let personExtVC = navi.topViewController as? PersonsExtTableViewController {
+                personExtVC.contacts = contacts
             }
         }
     }
