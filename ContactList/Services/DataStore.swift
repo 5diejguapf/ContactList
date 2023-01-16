@@ -5,11 +5,13 @@
 //  Created by serg on 14.01.2023.
 //
 
-struct DataStore {
+class DataStore {
     
-    // TODO: remove data generation and make this as class and singltone
+    static let shared = DataStore()
     
-    static func getContacts(withCount count: Int) -> [Person] {
+    private init() {}
+    
+    func getContacts(withCount count: Int) -> [Person] {
         if count < 1 {
             return []
         }
@@ -45,7 +47,7 @@ struct DataStore {
         return persons
     }
     
-    private static func generateEmail(name: String, surname: String) -> String {
+    private func generateEmail(name: String, surname: String) -> String {
         if name.isEmpty && surname.isEmpty {
             return ""
         }
@@ -57,65 +59,27 @@ struct DataStore {
         return ""
     }
     
-    private static func generatePhoneNumber() -> String {
+    private func generatePhoneNumber() -> String {
         Int.random(in: 90000000000...99999999999).formatted().replacingOccurrences(of: ",", with: "")
     }
     
-    private static let names = [
-        "Cloe",
-        "Jarrett",
-        "Gunnar",
-        "Ervin",
-        "Nathalie",
-        "Sidney",
-        "Tyrese",
-        "Jennifer",
-        "Bianca",
-        "Leilani",
-        "Franklin",
-        "Henry",
-        "Jacob",
-        "Daron",
-        "Tate",
-        "Gregory",
-        "Devante",
-        "Octavio",
-        "Devyn",
+    private var names = [
+        "Cloe", "Jarrett", "Gunnar", "Ervin", "Nathalie",
+        "Sidney", "Tyrese", "Jennifer", "Bianca", "Leilani",
+        "Franklin", "Henry", "Jacob", "Daron", "Tate", "Gregory",
+        "Devante", "Octavio", "Devyn",
     ]
     
-    private static let surnames = [
-        "Galloway",
-        "Tamayo",
-        "Gonzalez",
-        "Kearney",
-        "Whatley",
-        "Connell",
-        "Foreman",
-        "Aragon",
-        "See",
-        "Churchill",
-        "Seals",
-        "Marcus",
-        "Neumann",
-        "Hayden",
-        "Moran",
-        "Montes",
-        "Easton",
-        "Thorn",
-        "Schmitz",
-        "McCann",
-        "Ojeda",
-        "Crowley",
-        "Camacho",
-        "Judge",
-        "Drake",
+    private var surnames = [
+        "Galloway", "Tamayo", "Gonzalez", "Kearney", "Whatley",
+        "Connell", "Foreman", "Aragon", "See", "Churchill",
+        "Seals", "Marcus", "Neumann", "Hayden", "Moran",
+        "Montes", "Easton", "Thorn", "Schmitz", "McCann",
+        "Ojeda", "Crowley", "Camacho", "Judge", "Drake",
     ]
     
-    private static let domainNames = [
-        "email.com",
-        "email.ru",
-        "yahoo.com",
-        "ya.ru",
-        "gmail.com",
+    private var domainNames = [
+        "email.com", "email.ru", "yahoo.com",
+        "ya.ru", "gmail.com",
     ]
 }
