@@ -70,7 +70,7 @@
 				D529E72229732AF600F0194C /* SceneDelegate.swift */,
 				D559C93A297545D500151200 /* ViewControllers */,
 				D559C93D2975479100151200 /* Services */,
-				D559C93B297545E800151200 /* Model */,
+				D559C93B297545E800151200 /* Models */,
 				D529E72629732AF600F0194C /* Main.storyboard */,
 				D529E72929732AF700F0194C /* Assets.xcassets */,
 				D529E72B29732AF700F0194C /* LaunchScreen.storyboard */,
@@ -90,12 +90,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		D559C93B297545E800151200 /* Model */ = {
+		D559C93B297545E800151200 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D529E7362973319D00F0194C /* Person.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D559C93D2975479100151200 /* Services */ = {
