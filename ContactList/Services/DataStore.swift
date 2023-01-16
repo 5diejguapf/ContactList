@@ -15,7 +15,7 @@ class DataStore {
         if count < 1 {
             return []
         }
-        
+        let count = min(count, names.count * surnames.count * domainNames.count)
         var persons: [Person] = []
         
         while persons.count < count {
