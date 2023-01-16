@@ -3,10 +3,8 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,45 +94,13 @@
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" name="AccentColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="extendedContact" rowHeight="44" id="Xw7-vK-TbG" customClass="DataTableViewCell" customModule="ContactList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="extendedContact" rowHeight="44" id="Xw7-vK-TbG">
                                 <rect key="frame" x="0.0" y="38" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xw7-vK-TbG" id="zAV-vc-lhg">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-fw-bdf">
-                                            <rect key="frame" x="20" y="12" width="280" height="20"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Apu-vd-KXf">
-                                                    <rect key="frame" x="0.0" y="0.5" width="20" height="19"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Apu-vd-KXf" secondAttribute="height" multiplier="1:1" id="lJN-g1-ENQ"/>
-                                                    </constraints>
-                                                    <imageReference key="image" image="pencil.circle" catalog="system" symbolScale="default"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="0" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwe-Lo-pq5">
-                                                    <rect key="frame" x="28" y="0.0" width="252" height="20"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="phoneId"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="mZl-fw-bdf" firstAttribute="leading" secondItem="zAV-vc-lhg" secondAttribute="leading" constant="20" id="NGJ-nM-v9Y"/>
-                                        <constraint firstItem="mZl-fw-bdf" firstAttribute="centerX" secondItem="zAV-vc-lhg" secondAttribute="centerX" id="acy-AU-hhX"/>
-                                        <constraint firstItem="mZl-fw-bdf" firstAttribute="top" secondItem="zAV-vc-lhg" secondAttribute="topMargin" constant="1" id="ceB-Uv-hnB"/>
-                                        <constraint firstAttribute="trailing" secondItem="mZl-fw-bdf" secondAttribute="trailing" constant="20" id="fxE-rq-FcR"/>
-                                        <constraint firstItem="mZl-fw-bdf" firstAttribute="centerY" secondItem="zAV-vc-lhg" secondAttribute="centerY" id="z7k-xd-HGd"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="data" destination="jwe-Lo-pq5" id="cAA-jH-mWL"/>
-                                    <outlet property="lableImage" destination="Apu-vd-KXf" id="eNQ-5G-FPf"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -155,7 +121,7 @@
                     <tabBarItem key="tabBarItem" title="Contact" image="person.circle" catalog="system" id="117-I9-KIv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="kMI-OI-EBN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -173,6 +139,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6rv-B8-RbQ" customClass="TabViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uv5-ly-6dJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -192,7 +159,7 @@
                     <tabBarItem key="tabBarItem" title="Contact" image="person.circle" catalog="system" id="f4o-SE-cxI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KvU-wQ-q6U">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -206,7 +173,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -18,7 +18,6 @@
 		D529E7392973324E00F0194C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529E7382973324E00F0194C /* DataStore.swift */; };
 		D529E73B29744E4600F0194C /* PersonsExtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529E73A29744E4600F0194C /* PersonsExtTableViewController.swift */; };
 		D529E73D29744FC200F0194C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529E73C29744FC200F0194C /* TabViewController.swift */; };
-		D529E74129748DFF00F0194C /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D529E74029748DFF00F0194C /* DataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		D529E7382973324E00F0194C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D529E73A29744E4600F0194C /* PersonsExtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsExtTableViewController.swift; sourceTree = "<group>"; };
 		D529E73C29744FC200F0194C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		D529E74029748DFF00F0194C /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				D529E72029732AF600F0194C /* AppDelegate.swift */,
 				D529E72229732AF600F0194C /* SceneDelegate.swift */,
 				D559C93A297545D500151200 /* ViewControllers */,
-				D529E74029748DFF00F0194C /* DataTableViewCell.swift */,
 				D559C93D2975479100151200 /* Services */,
 				D559C93B297545E800151200 /* Model */,
 				D529E72629732AF600F0194C /* Main.storyboard */,
@@ -183,7 +180,6 @@
 				D529E73D29744FC200F0194C /* TabViewController.swift in Sources */,
 				D529E73529732B7000F0194C /* PersonsTableViewController.swift in Sources */,
 				D529E7392973324E00F0194C /* DataStore.swift in Sources */,
-				D529E74129748DFF00F0194C /* DataTableViewCell.swift in Sources */,
 				D529E72529732AF600F0194C /* ContactViewController.swift in Sources */,
 				D529E7372973319D00F0194C /* Person.swift in Sources */,
 				D529E72129732AF600F0194C /* AppDelegate.swift in Sources */,

@@ -49,16 +49,19 @@ class PersonsExtTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "extendedContact", for: indexPath) as! DataTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "extendedContact", for: indexPath)
         let contact = contacts[indexPath.section]
         
+        var content = cell.defaultContentConfiguration()
+        
         if indexPath.row == 0 {
-            cell.data.text = contact.phoneNumber
-            cell.lableImage.image = phoneImage
+            content.text = contact.name
+            content.image = phoneImage
         } else if indexPath.row == 1 {
-            cell.lableImage.image = mailImage
-            cell.data.text = contact.email
+            content.text = contact.email
+            content.image = mailImage
         }
+        cell.contentConfiguration = content
 
         return cell
     }
