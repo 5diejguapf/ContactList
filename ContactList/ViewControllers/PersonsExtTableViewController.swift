@@ -63,5 +63,9 @@ class PersonsExtTableViewController: UITableViewController {
     }
     
     // TODO: make row selection disallow or auto deselect
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
