@@ -31,8 +31,8 @@
 		D529E72C29732AF700F0194C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D529E72E29732AF700F0194C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D529E73429732B7000F0194C /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
-		D529E7362973319D00F0194C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Models/Person.swift; sourceTree = "<group>"; };
-		D529E7382973324E00F0194C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = Services/DataStore.swift; sourceTree = "<group>"; };
+		D529E7362973319D00F0194C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D529E7382973324E00F0194C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D529E73A29744E4600F0194C /* PersonsExtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsExtTableViewController.swift; sourceTree = "<group>"; };
 		D529E73C29744FC200F0194C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D529E74029748DFF00F0194C /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,19 +70,43 @@
 			children = (
 				D529E72029732AF600F0194C /* AppDelegate.swift */,
 				D529E72229732AF600F0194C /* SceneDelegate.swift */,
-				D529E72429732AF600F0194C /* ContactViewController.swift */,
-				D529E73429732B7000F0194C /* PersonsTableViewController.swift */,
-				D529E73A29744E4600F0194C /* PersonsExtTableViewController.swift */,
+				D559C93A297545D500151200 /* ViewControllers */,
 				D529E74029748DFF00F0194C /* DataTableViewCell.swift */,
-				D529E7382973324E00F0194C /* DataStore.swift */,
-				D529E73C29744FC200F0194C /* TabViewController.swift */,
-				D529E7362973319D00F0194C /* Person.swift */,
+				D559C93D2975479100151200 /* Services */,
+				D559C93B297545E800151200 /* Model */,
 				D529E72629732AF600F0194C /* Main.storyboard */,
 				D529E72929732AF700F0194C /* Assets.xcassets */,
 				D529E72B29732AF700F0194C /* LaunchScreen.storyboard */,
 				D529E72E29732AF700F0194C /* Info.plist */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		D559C93A297545D500151200 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D529E73C29744FC200F0194C /* TabViewController.swift */,
+				D529E72429732AF600F0194C /* ContactViewController.swift */,
+				D529E73429732B7000F0194C /* PersonsTableViewController.swift */,
+				D529E73A29744E4600F0194C /* PersonsExtTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D559C93B297545E800151200 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D529E7362973319D00F0194C /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D559C93D2975479100151200 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D529E7382973324E00F0194C /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

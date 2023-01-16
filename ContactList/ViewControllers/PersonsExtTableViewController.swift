@@ -11,6 +11,7 @@ class PersonsExtTableViewController: UITableViewController {
     
     private let phoneImage = UIImage(systemName: "phone")
     private let mailImage = UIImage(systemName: "mail")
+    private let headerHeigth = 40
     
     var contacts: [Person]!
     
@@ -31,7 +32,7 @@ class PersonsExtTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        40
+        CGFloat(headerHeigth)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -40,7 +41,7 @@ class PersonsExtTableViewController: UITableViewController {
         sectionHeaderLabel.text = contacts[section].name
         sectionHeaderLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         sectionHeaderLabel.textColor = .lightGray
-        sectionHeaderLabel.frame = CGRect(x: 20, y: 5, width: 250, height: 40)
+        sectionHeaderLabel.frame = CGRect(x: 20, y: 5, width: 250, height: headerHeigth)
         sectionHeaderLabelView.addSubview(sectionHeaderLabel)
 
         return sectionHeaderLabelView
