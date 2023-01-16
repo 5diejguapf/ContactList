@@ -41,10 +41,11 @@ class PersonsExtTableViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             content.text = contact.name
             content.image = phoneImage
-        } else if indexPath.row == 1 {
+        default:
             content.text = contact.email
             content.image = mailImage
         }

@@ -19,29 +19,22 @@ class PersonsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "simpleContact", for: indexPath)
-
         let contact = contacts[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.text = contact.name
         
         cell.contentConfiguration = content
-
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let contact = contacts[indexPath.row]
-        performSegue(withIdentifier: "showContact", sender: contact)
-    }
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: replace func tableView(..didSelectRowAt.. here with tableView.indexPathForSelectedRow
-        guard let contactVC = segue.destination as? ContactViewController else { return }
-        contactVC.contact = sender as? Person
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let contactVC = segue.destination as? ContactViewController else { return }
+            contactVC.contact = contacts[indexPath.row]
+        }
     }
 
 }
