@@ -19,6 +19,7 @@ class PersonsExtTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.backgroundColor = .white
+        tableView.allowsSelection = false
     }
     
     // MARK: - Table view data source
@@ -60,12 +61,6 @@ class PersonsExtTableViewController: UITableViewController {
         }
 
         return cell
-    }
-    
-    // TODO: make row selection disallow or auto deselect
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
