@@ -14,4 +14,6 @@ struct Person {
     var name: String {
         "\(firstName) \(lastName)"
     }
+    
+    // TODO: generate data here
 }

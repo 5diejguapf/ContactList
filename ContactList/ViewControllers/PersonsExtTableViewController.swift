@@ -61,5 +61,7 @@ class PersonsExtTableViewController: UITableViewController {
 
         return cell
     }
+    
+    // TODO: make row selection disallow or auto deselect
 
 }

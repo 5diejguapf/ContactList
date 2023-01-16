@@ -39,6 +39,7 @@ class PersonsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: replace func tableView(..didSelectRowAt.. here with tableView.indexPathForSelectedRow
         guard let contactVC = segue.destination as? ContactViewController else { return }
         contactVC.contact = sender as? Person
     }

@@ -6,6 +6,9 @@
 //
 
 struct DataStore {
+    
+    // TODO: remove data generation and make this as class and singltone
+    
     static func getContacts(withCount count: Int) -> [Person] {
         if count < 1 {
             return []
