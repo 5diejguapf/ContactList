@@ -36,16 +36,8 @@ class PersonsExtTableViewController: UITableViewController {
         CGFloat(headerHeigth)
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionHeaderLabelView = UIView()
-        let sectionHeaderLabel = UILabel()
-        sectionHeaderLabel.text = contacts[section].name
-        sectionHeaderLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-        sectionHeaderLabel.textColor = .lightGray
-        sectionHeaderLabel.frame = CGRect(x: 20, y: 5, width: 250, height: headerHeigth)
-        sectionHeaderLabelView.addSubview(sectionHeaderLabel)
-
-        return sectionHeaderLabelView
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        contacts[section].name
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
